@@ -1,0 +1,21 @@
+server:
+  port: 8084
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: path_route
+        uri: lb://service-consumer
+#                uri: http://hao123.com
+        predicates:
+        - Path=/index
+alibaba:
+  cloud:
+    access-key: EYiK5uKtIJTdyBUu
+    secret-key: hLMkYxYlMH7il7eKKdeHoZDw39Lr24
+  edas:
+    namespace: cn-hangzhou
+
+#  alibaba.cloud.access-key=EYiK5uKtIJTdyBUu
+#  alibaba.cloud.secret-key=hLMkYxYlMH7il7eKKdeHoZDw39Lr24
+#  alibaba.edas.namespace=cn-hangzhou
